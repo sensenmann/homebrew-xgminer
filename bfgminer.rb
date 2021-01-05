@@ -25,7 +25,7 @@ class Bfgminer < Formula
     system "chmod +x *.sh"
     system "NOSUBMODULES=1 ./autogen.sh"
     system "chmod +x configure"
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+    system "./configure", "--disable-debug",
                           "--prefix=#{prefix}",
                           "PKG_CONFIG_PATH=#{HOMEBREW_PREFIX}/opt/curl/lib/pkgconfig:#{HOMEBREW_PREFIX}/opt/jansson/lib/pkgconfig:#{HOMEBREW_PREFIX}/opt/libmicrohttpd/lib/pkgconfig:#{HOMEBREW_PREFIX}/opt/libusb/lib/pkgconfig:#{HOMEBREW_PREFIX}/opt/hidapi/lib/pkgconfig:#{HOMEBREW_PREFIX}/opt/libevent/lib/pkgconfig",
                           "--enable-scrypt",
